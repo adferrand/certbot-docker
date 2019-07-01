@@ -28,7 +28,7 @@ To setup the publication process, the target DockerHub project must be configure
 
     _For a Certbot core Docker_ -> Source: `/^(v[0-9.]+).*$/`, Tag: `{\1}`, Dockerfile: `Dockerfile`, Build context: `/core`
 
-    _For a Certbot DNS plugin Docker_ -> Source: `/^(v[0-9.]+).*$/`, Tag: `{1}`, Dockerfile: `Dockerfile`, Build context: `/plugin`
+    _For a Certbot DNS plugin Docker_ -> Source: `/^(v[0-9.]+).*$/`, Tag: `{\1}`, Dockerfile: `Dockerfile`, Build context: `/plugin`
 
 Publication worfklow
 --------------------
