@@ -26,7 +26,7 @@ To setup the publication process, the target DockerHub project must be configure
 3) Activate the AutoBuild feature, using the current GIT repository as source (eg. https.//github.com/certbot/certbot-docker.git) and the user defined in 1).
 4) Define a unique tag build rule in AutoBuild configuration:
 
-    _For a Certbot core Docker_ -> Source: `/^(v[0-9.]+).*$/`, Tag: `{1}`, Dockerfile: `Dockerfile`, Build context: `/core`
+    _For a Certbot core Docker_ -> Source: `/^(v[0-9.]+).*$/`, Tag: `{\1}`, Dockerfile: `Dockerfile`, Build context: `/core`
 
     _For a Certbot DNS plugin Docker_ -> Source: `/^(v[0-9.]+).*$/`, Tag: `{1}`, Dockerfile: `Dockerfile`, Build context: `/plugin`
 
