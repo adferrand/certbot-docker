@@ -18,7 +18,7 @@ Cleanup() {
 WORK_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
 
 CERTBOT_VERSION="$1"
-BRANCH_NAME=$(sed -E -e 's|v(.*)\.[0-9]+|\1.x|g' <<< $CERTBOT_VERSION)
+BRANCH_NAME=$(sed -E -e 's|v(.*)\.[0-9]+.*|\1.x|g' <<< $CERTBOT_VERSION)
 
 sed -i -e "s|current-.*-blue\.svg|current-$CERTBOT_VERSION-blue.svg|g" core/README.md
 sed -i -e "s|branch=.*)\]|branch=$BRANCH_NAME)]|g" core/README.md
