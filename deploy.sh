@@ -30,6 +30,6 @@ sed -i -e "s|branch=.*)\]|branch=$BRANCH_NAME)]|g" plugin/README.md
 pushd "$WORK_DIR"
     git commit -a -m "Release version $CERTBOT_DOCKER_VERSION" --allow-empty
     git tag "$CERTBOT_DOCKER_VERSION"
-    #git push
-    #git push --tags
+    git push
+    git push --tags
 popd
